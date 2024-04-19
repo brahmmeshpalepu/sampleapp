@@ -1,10 +1,13 @@
 {
+  "homepage": "https://brahmmeshpalepu.github.io/sampleapp",
   "name": "sampleapp",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "ng build  --base-href=/ng-job-search/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -33,6 +36,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-pages": "^1.0.1",
     "typescript": "~4.9.4"
   }
 }
